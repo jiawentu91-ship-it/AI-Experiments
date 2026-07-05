@@ -1,62 +1,47 @@
-# AI/ML 实验集合
+# AI 学习实验 🧠
 
-我的 AI 和机器学习实验记录，包含联邦学习、对抗样本、PyTorch 入门等探索。
+我的 AI 学习探索记录，从 PyTorch 入门到联邦学习与对抗样本研究。
 
 ## 目录结构
 
 ```
 AI-Experiments/
-├── notebooks/          # Jupyter Notebook 实验文件
-│   ├── 联邦学习/
-│   │   ├── fedavg_minimal.ipynb              # FedAvg 基础实现
-│   │   └── fedavg_adversarial_experiment.ipynb # FedAvg 对抗样本实验
-│   ├── 计算机视觉/
-│   │   ├── fractal_visualization.ipynb       # 分形可视化（Julia集）
-│   │   ├── mnist_handwriting_recognition.ipynb # MNIST 手写数字识别
-│   │   └── adversarial_plotting.ipynb        # 对抗样本画图
-│   ├── PyTorch 入门/
-│   │   └── first_pytorch.ipynb               # 第一次使用 PyTorch
-│   ├── Python 课程实验/
-│   │   ├── python_experiment_01.ipynb        # 实验一：Python 基础
-│   │   ├── python_experiment_02_numpy.ipynb  # 实验二：NumPy
-│   │   ├── python_experiment_03_sympy.ipynb  # 实验三：SymPy 符号计算
-│   │   └── python_experiment_04_matplotlib.ipynb # 实验四：Matplotlib 绘图
-│   ├── 其他/
-│   │   ├── number_guessing_game.ipynb        # 猜数游戏（class 练习）
-│   │   ├── final_exam_review.ipynb           # Python 期末复习
-│   │   └── hello_vsjupyter.ipynb             # VS Jupyter 测试
-├── scripts/            # Python 脚本
-│   ├── snake_game.py                         # 贪吃蛇游戏
-│   └── consecutive_duplicates.py             # 连续重复数字处理
-├── data/               # 数据集（仅小样本）
-└── README.md           # 本文件
+├── notebooks/                        # Jupyter Notebook 实验
+│   ├── first_pytorch.ipynb           # PyTorch 入门初探
+│   ├── fractal_visualization.ipynb   # Julia 集分形可视化
+│   ├── fedavg_minimal.ipynb          # FedAvg 联邦学习基础实现
+│   └── fedavg_adversarial_experiment.ipynb  # FedAvg + 对抗样本实验
+├── data/                             # 数据集
+└── README.md
+```
+
+## 学习路线
+
+```mermaid
+flowchart LR
+    A[PyTorch 入门] --> B[分形可视化]
+    B --> C[FedAvg 联邦学习]
+    C --> D[FedAvg + 对抗样本]
 ```
 
 ## 实验内容
 
-### 联邦学习 (Federated Learning)
-- **FedAvg 基础实现** — 使用 PyTorch 实现 FedAvg 算法，在 MNIST 数据集上进行分布式训练模拟
-- **FedAvg 对抗样本实验** — 在联邦学习框架下研究对抗样本的影响
+### 1. PyTorch 入门 — `first_pytorch.ipynb`
+> 从零开始接触 PyTorch 框架，验证环境配置，迈出深度学习第一步。
 
-### 计算机视觉
-- **分形可视化** — 使用 NumPy 和 Matplotlib 生成 Julia 集分形图像
-- **MNIST 手写数字识别** — 使用 PyTorch 构建 CNN 识别手写数字
+### 2. 分形可视化 — `fractal_visualization.ipynb`
+> 使用 NumPy + Matplotlib 生成 Julia 集分形图像，理解迭代系统与视觉之美。
 
-### PyTorch 入门
-- **第一次 PyTorch** — PyTorch 框架的初次探索和版本验证
+### 3. FedAvg 联邦学习 — `fedavg_minimal.ipynb`
+> 使用 PyTorch 实现 **FedAvg** 算法，在 MNIST 数据集上模拟分布式训练，探索"数据不动模型动"的核心思想。
 
-### Python 课程实验
-- 涵盖 Python 基础语法、NumPy 数值计算、SymPy 符号计算、Matplotlib 数据可视化
+### 4. FedAvg + 对抗样本 — `fedavg_adversarial_experiment.ipynb`
+> 在联邦学习框架中引入对抗样本攻击，研究分布式场景下模型的鲁棒性与安全性。
 
 ## 环境要求
 
-- Python 3.8+
-- PyTorch
-- NumPy, Matplotlib, SymPy
-- Jupyter Notebook / VS Code
-
 ```bash
-pip install torch numpy matplotlib sympy jupyter
+pip install torch numpy matplotlib jupyter
 ```
 
 ## 许可证
